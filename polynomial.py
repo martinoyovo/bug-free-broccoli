@@ -1,5 +1,6 @@
 from cmath import sqrt
 import matplotlib.pyplot as plt  # type:ignore
+import numpy
 
 
 class Poly2:
@@ -76,6 +77,20 @@ class Poly2:
         """ Méthode qui trace la courbe, voir fichier png."""
         
     
+        x = numpy.linspace(0,10,100)
+    
+        # La courbe
+        plt.plot(x,self.c*x**2 + self.b*x + self.a)
+
+        # Les axes
+        plt.axvline(x=0, color ='r')
+        plt.axhline(y=0, color ='r')   
+        axes = plt.gca()
+        axes.set_xlabel('x : abscisse')
+        axes.set_ylabel('f(x) : ordonnée')
+
+        plt.show()
+        
         # La courbe
         plt.plot(self.a, self.b, self.c)
 
