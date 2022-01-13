@@ -47,8 +47,8 @@ class Poly2:
         
         # checking condition for discriminant
         if dis > 0: 
-            x1 = (-b - sqrt_val(dis)) /(2*a)
-            x2 = (-b + sqrt_val(dis)) /(2*a)
+            x1 = (-b - sqrt_val) /(2*a)
+            x2 = (-b + sqrt_val) /(2*a)
             return x1, x2
       
         
@@ -57,10 +57,8 @@ class Poly2:
         
         # when discriminant is less than 0
         else:
-            print() 
-            print()
-            x1 = - b / (2 * a), "+", sqrt_val
-            x2 = - b / (2 * a), "-", sqrt_val
+            x1 = (-b - sqrt_val) /(2*a)
+            x2 = (-b + sqrt_val) /(2*a)
             return x1, x2
     
 
@@ -78,7 +76,7 @@ class Poly2:
         
     
         # La courbe
-        plt.plot(x)
+        plt.plot(x_points,self.solve())
 
         # Les axes
         plt.axvline(x=0, color ='r')
