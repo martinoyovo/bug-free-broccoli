@@ -69,14 +69,15 @@ class Poly2:
         Si: x prend pour valeur 5
         Alors: y = 5^2 + 1 = 26
         """
-        pass
+        return x*x+1
+        
 
     def draw(self, x_points=None):
         """ Méthode qui trace la courbe, voir fichier png."""
         
     
         # La courbe
-        plt.plot(x_points,self.solve())
+        plt.plot(self.a, self.b, self.c)
 
         # Les axes
         plt.axvline(x=0, color ='r')
