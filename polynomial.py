@@ -78,21 +78,10 @@ class Poly2:
         
     
         x = numpy.linspace(0,10,100)
+        
     
         # La courbe
         plt.plot(x,self.c*x**2 + self.b*x + self.a)
-
-        # Les axes
-        plt.axvline(x=0, color ='r')
-        plt.axhline(y=0, color ='r')   
-        axes = plt.gca()
-        axes.set_xlabel('x : abscisse')
-        axes.set_ylabel('f(x) : ordonnée')
-
-        plt.show()
-        
-        # La courbe
-        plt.plot(self.a, self.b, self.c)
 
         # Les axes
         plt.axvline(x=0, color ='r')
